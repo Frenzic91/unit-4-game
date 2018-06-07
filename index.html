@@ -1,5 +1,7 @@
-!<!DOCTYPE html>
+!
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +9,164 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
 
     <script src="assets/javascript/game.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 
     <title>Star Wars RPG</title>
 </head>
+
 <body>
-    
+    <!-- responsive game screen layout -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7"></div>
+            <div class="col-md-5">
+                <h1 id="game-title">Star Wars RPG</h1>
+            </div>
+        </div>
+        <div class="row no-gutters" id="character-select">
+            <div class="col-md-2">
+                <!-- individual character selection layout -->
+                <div id="obi-wan-kenobi-box">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <h6 class="text-center">Obi-Wan Kenobi</h6>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <img id="obi-wan-kenobi-img" src="assets/images/obi-wan-kenobi.jpg">
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2">
+                            <h6 class="text-center">120</h6>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="luke-skywalker-box">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <h6 class="text-center">Luke Skywalker</h6>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <img id="luke-skywalker-img" src="assets/images/luke-skywalker.jpg">
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2">
+                            <h6 class="text-center">120</h6>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="darth-sidius-box">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <h6 class="text-center">Darth Sidius</h6>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <img id="darth-sidius-img" src="assets/images/darth-sidious.jpg">
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2">
+                            <h6 class="text-center">120</h6>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div id="darth-maul-box">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <h6 class="text-center">Darth Maul</h6>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10">
+                            <img id="darth-maul-img" src="assets/images/darth-maul.jpg">
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2">
+                            <h6 class="text-center">120</h6>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h1 id="your-character-title">Your Character</h1>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+        <div class="row" id="your-character"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <h1 id="enemies-title">Enemies Available To Attack</h1>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+        <div class="row" id="enemies"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <h1 id="fight-section-title">Fight Section</h1>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <button id="attack-button"></button>
+            </div>
+            <div class="col-md-11"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h1 id="defender-title">Defender</h1>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+        <div class="row" id="defender"></div>
+        <div class="row" id="combat-text"></div>
+    </div>
 </body>
+
 </html>

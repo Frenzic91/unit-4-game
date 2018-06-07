@@ -1,0 +1,17 @@
+body {
+    background-image: url("../images/background.jpg");
+}
+
+h1, h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+img {
+    height: 220px;
+    width: 100%;
+}
+
+#obi-wan-kenobi-box, #luke-skywalker-box, #darth-sidius-box, #darth-maul-box {
+    background-color: #ffffff;
+    border: solid 5px green;
+}
